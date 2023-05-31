@@ -1,5 +1,7 @@
 import json
+import pymongo
 
+#just some file to check some stuff.
 json_str = '{"username": "worldxdana", "password": "123qwe123"}'
-json_obj = json.loads(json_str)
-print(json_obj["username"])
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client["users"]
